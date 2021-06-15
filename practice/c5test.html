@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ans1 = window.prompt('年を入力してね');
+        var ans2 = window.prompt('月を入力してね');
+        var ans3 = window.prompt('日を入力してね');
+        ans1 = parseInt(ans1);
+        ans2 = parseInt(ans2);
+        ans2 = ans2 - 1;
+        ans3 = parseInt(ans3);
+        var date = new Date(ans1, ans2, ans3);
+
+        var youbi = ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'];    
+        document.write('</p>' + date.toLocaleDateString() + 'は' + youbi[date.getDay()] + '</p>');
+        
+    </script>
+
+</body>
+</html>
